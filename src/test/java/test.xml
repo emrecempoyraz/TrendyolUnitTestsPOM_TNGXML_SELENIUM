@@ -1,0 +1,28 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name = "Trendyol" parallel="tests" thread-count="2">
+
+     <test name ="Chrome Test">
+        <parameter name = "browser" value ="chrome"/>
+        <classes>
+            <class name = "TestMain.TestMainTrendyol">
+              <methods>
+               <include name ="checkDropdown"/>
+               <include name ="checkMostPopularItems"/>
+               <include name = "checkSearchBar"/>
+              </methods>
+            </class>
+        </classes>
+     </test>
+     <test name="Chrome Test 2">
+         <parameter name = "browser" value ="edge"/>
+         <classes>
+             <class name = "TestMain.TestMainTrendyol">
+                 <methods>
+                     <include name ="checkDropdown"/>
+                     <include name ="checkMostPopularItems"/>
+                     <include name = "checkSearchBar"/>
+                 </methods>
+             </class>
+         </classes>
+     </test>
+</suite>
